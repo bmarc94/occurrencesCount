@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="StringHelper.js"></script>
+
+    <script>
+        var testString = "À 10:48 Pénélope dit à Mathieu : \"Dans l'après-midi d'hier j'ai trouvé le profil de Marc\". Après consultation par Mathieu, Pénélope transmet par mail un test pour Marc à l'adresse mbecard@knwomore.fr";
+        //Étape 1) trouver une phrase pas trop trop idiote au moins 10 min ..... :(
+        window.addEventListener('load', () => {
+            console.log(StringHelper.countEachWord(testString));
+            console.log(StringHelper.countEachWord(testString), true);
+            console.log(StringHelper.countEachWord(testString, false, 6));
+            console.log(StringHelper.countEachWord(testString, true, 0, /[^a-zà-ÿ-]+/g));
+        })
+    </script>
+
+</head>
+
+<body></body>
+
+</html>
